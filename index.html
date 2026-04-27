@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boleiros — Futebol Manager Brasileiro</title>
+<meta name="description" content="Boleiros é um jogo de gestão de futebol focado no Brasileirão. Disponível para Android.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0a1628; color: #e8e8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+body { min-height: 100vh; padding: 32px 20px 80px; }
+.container { max-width: 720px; margin: 0 auto; }
+header { border-bottom: 2px solid #ff6b00; padding-bottom: 20px; margin-bottom: 32px; display: flex; align-items: center; gap: 16px; }
+header svg { flex-shrink: 0; }
+h1 { font-size: 26px; font-weight: 900; color: #fff; line-height: 1.2; }
+.subtitle { color: #aaa; font-size: 13px; margin-top: 4px; }
+.lang-switch { margin-bottom: 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+.lang-switch a { display: inline-block; padding: 6px 14px; background: rgba(255,107,0,.15); color: #ff8a1a; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; border: 1px solid rgba(255,107,0,.3); }
+.lang-switch a.active { background: #ff6b00; color: #fff; }
+h2 { color: #ff8a1a; font-size: 19px; margin-top: 32px; margin-bottom: 12px; font-weight: 800; }
+h3 { color: #fff; font-size: 15px; margin-top: 18px; margin-bottom: 8px; font-weight: 700; }
+p { margin-bottom: 14px; color: #d0d0d0; font-size: 15px; }
+ul { margin-left: 22px; margin-bottom: 14px; }
+ul li { margin-bottom: 6px; color: #d0d0d0; }
+strong { color: #fff; }
+a { color: #ff8a1a; }
+.callout { background: rgba(31,160,80,.1); border: 1.5px solid rgba(31,160,80,.3); border-left: 4px solid #1fa050; padding: 14px 16px; border-radius: 8px; margin: 18px 0; }
+.callout-warn { background: rgba(245,158,11,.08); border-color: rgba(245,158,11,.3); border-left-color: #f59e0b; }
+footer { margin-top: 50px; padding-top: 24px; border-top: 1px solid #1f3148; color: #888; font-size: 13px; text-align: center; }
+footer a { color: #ff8a1a; text-decoration: none; }
+@media (max-width: 480px) { h1 { font-size: 22px; } h2 { font-size: 17px; } body { padding: 24px 16px 60px; } }
+
+.hero { text-align: center; padding: 40px 0; }
+.hero svg { margin-bottom: 24px; }
+.hero-title { font-size: 48px; font-weight: 900; color: #ff6b00; letter-spacing: -1px; margin-bottom: 12px; font-family: 'Roboto Condensed', Arial, sans-serif; }
+.hero-subtitle { font-size: 18px; color: #fff; margin-bottom: 8px; }
+.hero-tagline { font-size: 14px; color: #aaa; }
+.section { background: rgba(255,255,255,.04); border-radius: 12px; padding: 24px; margin-bottom: 24px; border: 1px solid rgba(255,255,255,.08); }
+.section h2 { margin-top: 0; }
+.links { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.btn { display: block; padding: 14px 18px; background: rgba(255,107,0,.15); color: #ff8a1a; text-decoration: none; border-radius: 8px; font-weight: 700; border: 1.5px solid rgba(255,107,0,.3); text-align: center; font-size: 15px; }
+.btn:hover { background: rgba(255,107,0,.25); }
+.btn-primary { background: #ff6b00; color: #fff; border-color: #ff6b00; }
+@media (max-width: 480px) { .hero-title { font-size: 36px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+<svg width="120" height="120" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a1a"/><stop offset="1" stop-color="#ff6b00"/></linearGradient><linearGradient id="hsd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2137"/><stop offset="1" stop-color="#08111e"/></linearGradient><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1fa050"/><stop offset="1" stop-color="#0d6b30"/></linearGradient></defs><rect width="1024" height="1024" rx="220" fill="#08111e"/><path d="M 512,150 L 850,260 L 850,580 Q 850,790 512,910 Q 174,790 174,580 L 174,260 Z" fill="url(#hs)"/><path d="M 512,195 L 812,295 L 812,580 Q 812,765 512,872 Q 212,765 212,580 L 212,295 Z" fill="url(#hsd)"/><clipPath id="hclip"><path d="M 512,195 L 812,295 L 812,580 Q 812,765 512,872 Q 212,765 212,580 L 212,295 Z"/></clipPath><g clip-path="url(#hclip)"><rect x="200" y="630" width="624" height="270" fill="url(#hg)"/></g><circle cx="512" cy="470" r="160" fill="#fff" stroke="#0a1628" stroke-width="3"/><polygon points="512,408 571,450 549,520 475,520 453,450" fill="#0a1628"/><g fill="#ffe066"><polygon points="412,290 420,312 443,312 425,326 432,348 412,334 392,348 399,326 381,312 404,312"/><polygon points="512,272 520,294 543,294 525,308 532,330 512,316 492,330 499,308 481,294 504,294"/><polygon points="612,290 620,312 643,312 625,326 632,348 612,334 592,348 599,326 581,312 604,312"/></g></svg>
+<div class="hero-title">BOLEIROS</div>
+<div class="hero-subtitle">Você está no comando.</div>
+<div class="hero-tagline">Jogo de futebol manager focado no Brasileirão</div>
+</div>
+
+<div class="section">
+<h2>📄 Documentos</h2>
+<p>Documentação oficial do Boleiros:</p>
+<div class="links">
+<a class="btn" href="privacy-pt.html">🇧🇷 Política de Privacidade (Português)</a>
+<a class="btn" href="privacy-en.html">🇺🇸 Privacy Policy (English)</a>
+</div>
+</div>
+
+<div class="section">
+<h2>📦 Pacotes da Comunidade</h2>
+<p>O Boleiros suporta pacotes opcionais (DLC) com escudos e nomes reais. Em breve, links para download dos pacotes oficiais aparecerão aqui.</p>
+</div>
+
+<div class="section">
+<h2>📧 Contato</h2>
+<p>Dúvidas, sugestões ou reportar bugs:</p>
+<p><a href="mailto:fvsp.digital@gmail.com">fvsp.digital@gmail.com</a></p>
+</div>
+
+<footer>
+© Boleiros 2026
+</footer>
+
+</div>
+</body>
+</html>
